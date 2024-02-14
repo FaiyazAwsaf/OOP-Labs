@@ -8,15 +8,38 @@ public abstract class Vehicle {
         this.initialSpeed = initialSpeed;
         this.initialFuel = initialFuel;
     }
-    public abstract void move(int rate);
+
     public abstract void turn(String direction);
-    public abstract void speedUp(double accelerationRate);
 
-    public abstract void speedDown(double accelerationRate);
+    public void speedDown(double accelerationRate, double accelerationFactor) {
+        double currentSpeed = getInitialSpeed();
+        double newSpeed = currentSpeed - (accelerationFactor * accelerationRate);
+        setInitialSpeed(newSpeed);
+    }
+
+    public void speedUp(double accelerationRate, double accelerationFactor) {
+        double currentSpeed = getInitialSpeed();
+        double newSpeed = currentSpeed + (accelerationFactor * accelerationRate);
+        setInitialSpeed(newSpeed);
+    }
 
 
+    public void refuel(double refuelAmount) {
+        double newFuel = getInitialFuel() + refuelAmount;
+        setInitialFuel(newFuel);
+    };
 
-    public abstract void refuel(double refuelAmount);
+    public void move(int distance, int rate) {
+        double currentFuel = getInitialFuel();
+        if (currentFuel > 0) {
+            double fuelConsumed = rate * distance;
+            double newFuel = currentFuel - fuelConsumed;
+            if (newFuel < 0) {
+                newFuel = 0;
+            }
+            setInitialFuel(newFuel);
+        }
+    }
     public abstract void displayStatus();
 
     public double getInitialFuel() {

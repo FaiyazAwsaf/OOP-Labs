@@ -4,7 +4,6 @@ public abstract class GroundVehicle extends Vehicle{
     public GroundVehicle(String name, double initialSpeed, double initialFuel) {
         super(name, initialSpeed, initialFuel);
     }
-    public abstract void move(int rate);
 
     @Override
     public void turn(String direction) {
@@ -13,17 +12,27 @@ public abstract class GroundVehicle extends Vehicle{
         }
         else
             System.out.println("The car turned Right");
+//        System.out.println("The car turned " + direction);
     }
-
-
-    public abstract void speedDown(double accelerationRate);
-    public abstract void speedUp(double decelerationRate);
-
-    @Override
-    public void refuel(double refuelAmount) {
-        double newFuel = getInitialFuel() + refuelAmount;
-        setInitialFuel(newFuel);
-    }
+//    @Override
+//    public void speedDown(double accelerationRate, double accelerationFactor) {
+//        double currentSpeed = getInitialSpeed();
+//        double newSpeed = currentSpeed - (accelerationFactor * accelerationRate);
+//        setInitialSpeed(newSpeed);
+//    }
+//
+//    @Override
+//    public void speedUp(double accelerationRate, double accelerationFactor) {
+//        double currentSpeed = getInitialSpeed();
+//        double newSpeed = currentSpeed + (accelerationFactor * accelerationRate);
+//        setInitialSpeed(newSpeed);
+//    }
+//
+//    @Override
+//    public void refuel(double refuelAmount) {
+//        double newFuel = getInitialFuel() + refuelAmount;
+//        setInitialFuel(newFuel);
+//    }
 
     @Override
     public void displayStatus() {

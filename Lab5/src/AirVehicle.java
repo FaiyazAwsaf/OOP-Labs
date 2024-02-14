@@ -7,15 +7,21 @@ public abstract class AirVehicle extends Vehicle{
         super(name, initialSpeed, initialFuel);
         this.initialAltitude = initialAltitude;
     }
-    public abstract void ascending(int ascRate);
-    public abstract void descending(int decRate);
 
-
-    @Override
-    public void refuel(double refuelAmount) {
-        double newFuel = getInitialFuel() + refuelAmount;
-        setInitialFuel(newFuel);
+    public void ascending(int altitude, double ascRate) {
+        int currentAltitude = getInitialAltitude();
+        double newAltitude = currentAltitude + ascRate * altitude;
+        setInitialAltitude((int) newAltitude);
     }
+
+    public void descending(int altitude, double decRate) {
+        int currentAltitude = getInitialAltitude();
+        double newAltitude = currentAltitude - decRate * altitude;
+        setInitialAltitude((int) newAltitude);
+    }
+
+
+
     @Override
     public void turn(String direction) {
         if(Objects.equals(direction, "Left")) {
