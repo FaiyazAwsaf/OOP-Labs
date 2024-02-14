@@ -12,16 +12,16 @@ public class App {
         truck.displayStatus();
         overloadedTruck.displayStatus();
 
-        car.speedDown(20);
-        car.speedUp(20);
+        car.speedDown(20, 0.75);
+        car.speedUp(20, 0.85);
         car.refuel(40);
-        car.move(20);
+        car.move(20, 20);
 
-        truck.move(30);
-        truck.speedUp(10);
+        truck.move(20, 20);
+        truck.speedUp(10, 0.60);
 
-        overloadedTruck.move(40);
-        overloadedTruck.speedDown(10);
+        overloadedTruck.move(20, 20);
+        overloadedTruck.speedDown(10, 0.70);
 
         System.out.println("\nCurrent status of vehicles:");
 
@@ -35,18 +35,18 @@ public class App {
         CargoPlane.displayStatus();
 
         System.out.println("\nCurrent status of vehicles:");
-        plane.speedUp(10);
-        plane.move(30);
-        plane.speedDown(5);
-        plane.ascending(10);
-        plane.descending(40);
+        plane.speedUp(10, .85);
+        plane.move(20, 20);
+        plane.speedDown(5, .95);
+        plane.ascending(1000, .65);
+        plane.descending(4000, .95);
         plane.displayStatus();
 
-        CargoPlane.speedUp(10);
-        CargoPlane.move(30);
-        CargoPlane.speedDown(5);
-        CargoPlane.ascending(10);
-        CargoPlane.descending(40);
+        CargoPlane.speedUp(10,.80);
+        CargoPlane.move(20, 20);
+        CargoPlane.speedDown(5,0.90);
+        CargoPlane.ascending(1000, 0.65);
+        CargoPlane.descending(4000,0.95);
         CargoPlane.displayStatus();
 
     }
