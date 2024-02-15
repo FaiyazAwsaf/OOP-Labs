@@ -70,17 +70,17 @@ public class App {
 
         System.out.println("\nCurrent status of vehicles:");
         airbus.speedUp(10, airbusSpeedingRate);
-        airbus.move(20, airbusFuelRate);
+        airbus.move(200, airbusFuelRate);
         airbus.speedDown(5, airbusSlowingRate);
-        airbus.ascending(1000, airbusAscendingRate);
-        airbus.descending(4000, airbusDescendingRate);
+        airbus.ascending(airbusAscendingRate);
+        airbus.descending(airbusDescendingRate);
         airbus.displayStatus();
 
         CargoPlane.speedUp(10,cargoPlaneSpeedingRate);
-        CargoPlane.move(20, carFuelRate);
+        CargoPlane.move(200, carFuelRate);
         CargoPlane.speedDown(5,cargoPlaneSlowingRate);
-        CargoPlane.ascending(1000, cargoPlaneAscendingRate);
-        CargoPlane.descending(4000,cargoPlaneDescendingRate);
+        CargoPlane.ascending(cargoPlaneAscendingRate);
+        CargoPlane.descending(cargoPlaneDescendingRate);
         CargoPlane.displayStatus();
 
     }
