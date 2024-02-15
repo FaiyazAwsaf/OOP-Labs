@@ -8,15 +8,15 @@ public abstract class AirVehicle extends Vehicle{
         this.initialAltitude = initialAltitude;
     }
 
-    public void ascending(int altitude, double ascRate) {
+    public void ascending(double ascRate) {
         int currentAltitude = getInitialAltitude();
-        double newAltitude = currentAltitude + ascRate * altitude;
+        double newAltitude = currentAltitude + ascRate;
         setInitialAltitude((int) newAltitude);
     }
 
-    public void descending(int altitude, double decRate) {
+    public void descending (double decRate) {
         int currentAltitude = getInitialAltitude();
-        double newAltitude = currentAltitude - decRate * altitude;
+        double newAltitude = currentAltitude - decRate;
         setInitialAltitude((int) newAltitude);
     }
 
