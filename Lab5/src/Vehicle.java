@@ -29,7 +29,7 @@ public abstract class Vehicle {
         setInitialFuel(newFuel);
     };
 
-    public void move(int distance, int rate) {
+    public void move(int distance, double rate) {
         double currentFuel = getInitialFuel();
         if (currentFuel > 0) {
             double fuelConsumed = rate * distance;
