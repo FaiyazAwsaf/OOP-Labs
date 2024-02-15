@@ -1,7 +1,41 @@
 public class App {
     public static void main(String[] args){
+
+        double carSpeedingRate = 0.85;
+        double carSlowingRate =  0.75;
+        double carFuelRate =  1.2;
+
+
+        double busSpeedingRate = 0.80;
+        double busSlowingRate =  0.65;
+        double busFuelRate =  1.5;
+
+
+        double truckSpeedingRate = 0.78;
+        double truckSlowingRate =  0.60;
+        double truckFuelRate =  1.8;
+
+
+        double airbusSpeedingRate = 0.95;
+        double airbusSlowingRate =  0.65;
+        double airbusFuelRate = 2.2 ;
+        double airbusAscendingRate =  60;
+        double airbusDescendingRate =  120;
+
+
+        double cargoPlaneSpeedingRate = 0.90;
+        double cargoPlaneSlowingRate =  0.60;
+        double cargoPlaneFuelRate  =  2.4;
+        double cargoPlaneAscendingRate =  50;
+        double cargoPlaneDescendingRate =  130;
+
+
+        double shipSpeedingRate = 0.70;
+        double shipSlowingRate =  0.57;
+        double shipPlaneFuelRate =  2.1;
+
         Vehicle car = new Car("Sedan", 120, 100);
-        AirVehicle plane = new Airbus("A330neo", 240, 30000, 36000);
+        AirVehicle airbus = new Airbus("A330neo", 240, 30000, 36000);
         Vehicle truck = new Truck("Truck", 80, 80, 5000);
         Vehicle overloadedTruck = new Truck("OverloadedTruck", 80, 80, 5000,2);
         AirVehicle CargoPlane = new CargoPlane("Airbus Beluga", 200, 20000, 30000, 23000);
@@ -12,16 +46,16 @@ public class App {
         truck.displayStatus();
         overloadedTruck.displayStatus();
 
-        car.speedDown(20, 0.75);
-        car.speedUp(20, 0.85);
+        car.speedDown(20, carSpeedingRate);
+        car.speedUp(20, carSlowingRate);
         car.refuel(40);
-        car.move(20, 20);
+        car.move(20, carFuelRate);
 
-        truck.move(20, 20);
-        truck.speedUp(10, 0.60);
+        truck.move(20, truckFuelRate);
+        truck.speedUp(10, busSpeedingRate);
 
-        overloadedTruck.move(20, 20);
-        overloadedTruck.speedDown(10, 0.70);
+        overloadedTruck.move(20, truckFuelRate);
+        overloadedTruck.speedDown(10, busSlowingRate);
 
         System.out.println("\nCurrent status of vehicles:");
 
@@ -31,22 +65,22 @@ public class App {
 
         System.out.println("\nInitial status of vehicles:");
 
-        plane.displayStatus();
+        airbus.displayStatus();
         CargoPlane.displayStatus();
 
         System.out.println("\nCurrent status of vehicles:");
-        plane.speedUp(10, .85);
-        plane.move(20, 20);
-        plane.speedDown(5, .95);
-        plane.ascending(1000, .65);
-        plane.descending(4000, .95);
-        plane.displayStatus();
+        airbus.speedUp(10, airbusSpeedingRate);
+        airbus.move(20, airbusFuelRate);
+        airbus.speedDown(5, airbusSlowingRate);
+        airbus.ascending(1000, airbusAscendingRate);
+        airbus.descending(4000, airbusDescendingRate);
+        airbus.displayStatus();
 
-        CargoPlane.speedUp(10,.80);
-        CargoPlane.move(20, 20);
-        CargoPlane.speedDown(5,0.90);
-        CargoPlane.ascending(1000, 0.65);
-        CargoPlane.descending(4000,0.95);
+        CargoPlane.speedUp(10,cargoPlaneSpeedingRate);
+        CargoPlane.move(20, carFuelRate);
+        CargoPlane.speedDown(5,cargoPlaneSlowingRate);
+        CargoPlane.ascending(1000, cargoPlaneAscendingRate);
+        CargoPlane.descending(4000,cargoPlaneDescendingRate);
         CargoPlane.displayStatus();
 
     }
