@@ -6,7 +6,7 @@ public class Books extends Products {
     String genre;
 
 
-    public Books (String name, double qunamantity, String description, double basePrice, int discountCode, String author, String publisherName, String genre) {
+    public Books (String name, double quantity, String description, double basePrice, int discountCode, String author, String publisherName, String genre) {
         super(name, quantity, description, basePrice, discountCode);
         this.author = author;
         this.publisherName = publisherName;

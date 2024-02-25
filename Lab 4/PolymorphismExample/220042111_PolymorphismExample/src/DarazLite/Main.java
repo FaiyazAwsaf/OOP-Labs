@@ -9,6 +9,7 @@ public class Main {
         Clothes C2 = new Clothes("BURBERRY Shirt", 1, "Half sleeves\nCheque\nBrown and yellow color", 4500, 14,45);
 
         B1.displayInfo();
+        B1.voucher(1234);
         B2.displayInfo();
         C1.displayInfo();
         C2.displayInfo();

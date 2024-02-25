@@ -1,9 +1,6 @@
 public class App {
     public static void main(String[] args){
 
-        double carSpeedingRate = 0.85;
-        double carSlowingRate =  0.75;
-        double carFuelRate =  1.2;
 
 
         double busSpeedingRate = 0.80;

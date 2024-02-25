@@ -32,13 +32,21 @@ public class Products {
     }
 
     public double calculatePrice() {
+//        if(discountCode == 1234) {
+//            return 0.9*basePrice*quantity - 50;
+//        }
+//        else
+            return 0.9*basePrice*quantity;
+
+     }
+    public double voucher(int discountCode) {
         if(discountCode == 1234) {
             return 0.9*basePrice*quantity - 50;
         }
         else
             return 0.9*basePrice*quantity;
 
-     }
+    }
 
     public void displayInfo() {
         System.out.println("Product: " + name);
