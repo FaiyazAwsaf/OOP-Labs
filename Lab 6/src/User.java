@@ -3,12 +3,14 @@ import java.util.ArrayList;
 public class User {
     private String username;
     private int userID;
-    private ArrayList<Chef> favoriteChefs = new ArrayList<>(); // Forgot to create array list
-    private ArrayList<Recipe> favoriteRecipes = new ArrayList<>();
+    private ArrayList<Chef> favoriteChefs;  // Forgot to create array list
+    private ArrayList<Recipe> favoriteRecipes;
 
-    public User(String username, int userID) {
+    public User(String username, int userID, ArrayList<Chef> favoriteChefs, ArrayList<Recipe> favoriteRecipes) {
         this.username = username;
         this.userID = userID;
+        this.favoriteRecipes = favoriteRecipes;
+        this.favoriteChefs = favoriteChefs;
     }
     public void addFavoriteRecipe(Recipe recipe) {
         favoriteRecipes.add(recipe);

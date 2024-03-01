@@ -5,9 +5,15 @@ public class Chef {
     private int ChefID;
     ArrayList<Recipe> chefRecipe;
 
+    Recipe R1, R2, R3;
+
     public Chef(String name, int ChefID) {
         this.name = name;
         this.ChefID = ChefID;
+
+        this.R1 = new Recipe("Bhaat",this);
+        this.R2 = new Recipe("Saussage Porota", this);
+        this.R3 = new Recipe("Khichuri", this);
         this.chefRecipe = new ArrayList<>();
     }
 
