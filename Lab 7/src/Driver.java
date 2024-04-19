@@ -13,10 +13,10 @@ public class Driver implements Vehicle{
 
     public void speedUp(double accelerationFactor) {
         vehicle.speedUp(accelerationFactor);
-    };
+    }
     public void refuel(double refuelAmount) {
         vehicle.refuel(refuelAmount);
-    };
+    }
     public void move(int distance) {
         vehicle.move(distance);
     };

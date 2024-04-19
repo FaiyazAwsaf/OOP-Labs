@@ -11,7 +11,7 @@ public class Student extends Personnel {
         super(name, address, birthYear, joiningYear );
         this.dept = dept;
         this.programme = programme;
-        uniqueID = generateID();
+        //uniqueID = generateID();
 
     }
     @Override

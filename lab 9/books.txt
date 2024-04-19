@@ -1,0 +1,3 @@
+To Kill a Mockingbird,Harper Lee,FICTION
+1984,George Orwell,SCIENCE_FICTION
+The Great Gatsby,F. Scott Fitzgerald,ROMANCE
