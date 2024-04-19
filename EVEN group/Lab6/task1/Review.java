@@ -25,4 +25,9 @@ public class Review {
         this.message = "No reviews yet";
         this.rating = Rating.UNRATED;
     }
+
+    @Override
+    public String toString() {
+        return  message + " - " + rating ;
+    }
 }

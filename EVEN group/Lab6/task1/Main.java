@@ -28,6 +28,10 @@ public class Main {
                 customer1.cart.getTotalPrice()
         );
 
+        Review review1 = new Review("pocha product", Rating.FIVE_STAR);
+        product1.setReview(review1);
+        System.out.println(product1.review);
+
     }
 
 }
