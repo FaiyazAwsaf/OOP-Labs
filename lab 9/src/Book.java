@@ -36,7 +36,7 @@ public class Book {
     }
 
     public void printDetails() {
-        System.out.println("Title: " + getName() + "Author: " + getAuthor() + "Genre: " + getGenre());
+        System.out.println("Title: " + getName() + "\nAuthor: " + getAuthor() + "\nGenre: " + getGenre() + "\n-----------------------------");
     }
 }
 

@@ -7,57 +7,56 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<Book> books = new ArrayList<>();
-        books.add(new Book("To Kill a Mockingbird", "Harper Lee", Genre.FICTION));
-        books.add(new Book("1984", "George Orwell", Genre.SCIENCE_FICTION));
-        books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", Genre.ROMANCE));
+//        List<Book> books = new ArrayList<>();
+//        books.add(new Book("shoe dog", "phil knight", Genre.BIOGRAPHY));
 
-        writeBooksToFile(books);
+//        writeBooksToFile(books);
 
         List<Book> storedBooks = readBooksFromFile();
+
         for (Book book : storedBooks) {
             book.printDetails();
         }
     }
 
 
-    public static void writeBooksToFile(List<Book> books) {
-        File file = new File("books.txt");
+//    public static void writeBooksToFile(List<Book> books) {
+//        File file = new File("books.txt");
 
-        try {
-            boolean value = file.createNewFile();
-            if(value) {
-                System.out.println("New file is created");
-            }
-            else {
-                System.out.println("File not found");
-            }
-        }
-        catch (Exception e) {
-            e.getMessage();
-            e.getStackTrace();
-        }
+//        try {
+//            boolean value = file.createNewFile();
+//            if(value) {
+//                System.out.println("New file is created");
+//            }
+//            else {
+//                System.out.println("File not found");
+//            }
+//        }
+//        catch (Exception e) {
+//            e.getMessage();
+//            e.getStackTrace();
+//        }
 
-        try{
-           FileWriter fileWriter = new FileWriter(file, true);
-            for (Book book : books) {
-                fileWriter.write(book.getName()  + "," + book.getAuthor() + "," + book.getGenre() + "\n");
-            }
-            fileWriter.close();
-            System.out.println("Books written to file successfully.");
+//        try{
+//           FileWriter fileWriter = new FileWriter(file, true);
+//            for (Book book : books) {
+//                fileWriter.write(book.getName()  + "," + book.getAuthor() + "," + book.getGenre() + "\n");
+//            }
+//            fileWriter.close();
+//            System.out.println("Books written to file successfully.");
+//
+//
+//        }
+//        catch (IOException e) {
+//            System.err.println("Error writing books to file: " + e.getMessage());
+//        }
+//        catch (Exception e) {
+//            e.getMessage();
+//        }
+//    }
 
 
-        }
-        catch (IOException e) {
-            System.err.println("Error writing books to file: " + e.getMessage());
-        }
-        catch (Exception e) {
-            e.getMessage();
-        }
-    }
-
-
-    // Read books from file and display
+//     Read books from file and display
     public static List<Book> readBooksFromFile() {
         List<Book> storedBooks =  new ArrayList<>();
         File file = new File("books.txt");
@@ -65,6 +64,7 @@ public class Main {
 
         try {
             Scanner fileReader = new Scanner(file);
+
             while (fileReader.hasNextLine()) {
                 String fileData = fileReader.nextLine();
 
@@ -72,9 +72,9 @@ public class Main {
                 if (parts.length == 3) {
                     String name = parts[0].trim();
                     String author = parts[1].trim();
-                    String genreValue = parts[2].trim();
+                    String x = parts[2].trim();
 
-                    Genre genre = Genre.valueOf(genreValue);
+                    Genre genre = Genre.valueOf(x);
 
                     storedBooks.add(new Book(name, author, genre));
                 }
