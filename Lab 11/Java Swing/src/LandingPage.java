@@ -17,9 +17,9 @@ public class LandingPage extends JFrame {
 
         setTitle("Login Page");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1920, 1080);
+        setSize(1000, 800);
         setLayout(null);
-        ImageIcon logo = new ImageIcon("F:\\Programming\\JAVA\\Sandbox\\Java Swing\\src\\logo.jpg");
+        ImageIcon logo = new ImageIcon("src\\logo.jpg");
         setIconImage(logo.getImage());
 
         // ALL TITLE BAR LABELS
@@ -27,7 +27,7 @@ public class LandingPage extends JFrame {
         titleBar = new JLabel();
         titleBar.setText("Book Library");
 
-        ImageIcon bookImage = new ImageIcon("F:\\Programming\\JAVA\\Sandbox\\Java Swing\\src\\image.png");
+        ImageIcon bookImage = new ImageIcon("src\\image.png");
         titleBar.setIcon(bookImage);
 
         titleBar.setHorizontalTextPosition(JLabel.CENTER);

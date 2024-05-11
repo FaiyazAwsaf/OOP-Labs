@@ -11,13 +11,12 @@ public class Main {
         books.add(new Book("To Kill a Mockingbird", "Harper Lee", Genre.FICTION));
         books.add(new Book("1984", "George Orwell", Genre.SCIENCE_FICTION));
         books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", Genre.ROMANCE));
-//         writeBooksToFile(books);
+
+        writeBooksToFile(books);
 
         List<Book> storedBooks = readBooksFromFile();
-        if (storedBooks != null) {
-            for (Book book : storedBooks) {
-                book.printDetails();
-            }
+        for (Book book : storedBooks) {
+            book.printDetails();
         }
     }
 
