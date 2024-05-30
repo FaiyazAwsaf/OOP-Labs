@@ -21,13 +21,15 @@ public class LandingPage extends JFrame {
         setLayout(null);
         ImageIcon logo = new ImageIcon("F:\\Programming\\JAVA\\Sandbox\\Java Swing\\src\\logo.jpg");
         setIconImage(logo.getImage());
+        setVisible(true);
 
         // ALL TITLE BAR LABELS
 
         titleBar = new JLabel();
         titleBar.setText("Book Library");
+        titleBar.setLayout(new BoxLayout(titleBar, BoxLayout.Y_AXIS));
 
-        ImageIcon bookImage = new ImageIcon("F:\\Programming\\JAVA\\Sandbox\\Java Swing\\src\\image.png");
+        ImageIcon bookImage = new ImageIcon("D:\\JAVA OOP\\OOP-Labs\\Lab 11\\src\\image.png");
         titleBar.setIcon(bookImage);
 
         titleBar.setHorizontalTextPosition(JLabel.CENTER);
@@ -114,6 +116,7 @@ public class LandingPage extends JFrame {
 
         //CREATING PANELS TO ADD LABELS
         JPanel titleBarPanel = new JPanel();
+        titleBarPanel.setLayout(new BoxLayout(titleBarPanel, BoxLayout.Y_AXIS));
         titleBarPanel.setBackground(new Color(220, 240, 244));
         titleBarPanel.setBounds(400,200, 900,220);
 
@@ -124,9 +127,11 @@ public class LandingPage extends JFrame {
 
 
         JPanel formPanel = new JPanel();
-        formPanel.setLayout(null);
+        formPanel.setLayout(new BoxLayout(formPanel, BoxLayout.Y_AXIS));
         formPanel.setBackground(new Color(255, 240, 230));
         formPanel.setBounds(400,220+200, 900,320);
+        formPanel.setVisible(true);
+
 
         Border formPanelBorder = BorderFactory.createLineBorder(new Color(121, 49, 0),3);
         formPanel.setBorder(formPanelBorder);
@@ -142,9 +147,11 @@ public class LandingPage extends JFrame {
         formPanel.add(status);
         formPanel.add(statusCombo);
 
+
         //ADDING BUTTONS
         formPanel.add(addBook);
         formPanel.add(viewBooks);
+
 
         // ADD PANELS TO FRAME:
         add(titleBarPanel);

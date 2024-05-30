@@ -1,5 +1,6 @@
 public class BankingSystem {
-    public static void main(String[] args) throws InsuffientBalanceException, InvalidRateException {
+    public static void main(String[] args) //throws //InsuffientBalanceException, InvalidRateException
+    {
         BankAccount account = new BankAccount ("123 ", 1000) ;
 
         try {
@@ -31,6 +32,7 @@ public class BankingSystem {
         BankAccount [] accounts = new BankAccount [3];
         try {
             accounts[2] =null;
+            accounts[2].withdraw(200);
 
             accounts [1] = new BankAccount (" 123 ", 1000);
             accounts[1].withdraw(2000);
